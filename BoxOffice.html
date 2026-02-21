@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+
+    <meta name="description"content= "Hans Zimmer Music Fan Club"/>
+
+      <div class="container">
+
+<title>The Hans Zimmer Music Fan Club by Simon Kidney  </title>
+
+<link rel="stylesheet" href ="style.css"/>
+
+</head>
+
+<script>
+  const ratesBaseUSD = {
+    USD: 1,
+    EUR: 0.92, 
+    GBP: 0.80
+  };
+
+  function formatMoney(amount, currency) {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: currency,
+      maximumFractionDigits: 0
+    }).format(amount);
+  }
+
+  function updateDisplayedCurrency() {
+    const currency = document.getElementById("currencySelect").value;
+    const rate = ratesBaseUSD[currency] ?? 1;
+
+    document.querySelectorAll(".money").forEach((cell) => {
+      const usd = Number(cell.dataset.usd);
+      if (!Number.isFinite(usd)) return;
+
+      const converted = usd * rate;
+      cell.textContent = formatMoney(converted, currency);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+ 
+    updateDisplayedCurrency();
+
+  
+    document.getElementById("currencySelect")
+      .addEventListener("change", updateDisplayedCurrency);
+  });
+</script>
+
+<body>
+
+    <header class = "site-header">
+
+<div class = "header-container">
+
+<h1>Hans Zimmer Music Composer </h1>
+
+</div>
+
+    </header>
+
+<nav>
+
+    <a href="index.html">Home</a>
+<a href="SongsandFilms.html">Songs & Films Listing</a>
+<a href="Concerts.html">Concerts</a>
+<a href="BoxOffice.html">Box Office</a>
+
+</nav>
+
+<label for="currencySelect">Currency:</label>
+<select id="currencySelect">
+  <option value="USD" selected>USD ($)</option>
+  <option value="EUR">EUR (€)</option>
+  <option value="GBP">GBP (£)</option>
+</select>
+
+
+
+<p>
+
+<Table>
+
+<tr><th>Actor/Technical Role</th><th>Specific Role</th><th>Movies</th><th>Domestic Box Office</th><th>International Box Office</th><th>Worldwide Box Office</th></tr>
+<tr><td>As an Actor</td><td>Narrator</td><td>1</td><td class="money" data-usd="0">0</td><td class="money" data-usd="969428">969428</td><td class="money" data-usd="969428">969428</td></tr>
+<tr><td>As an Actor</td><td>Inverviewee</td><td>1</td><td class="money" data-usd="0">0</td><td class="money" data-usd="83050">83050</td><td class="money" data-usd="83050">83050</td></tr>
+<tr><td>In Technical Roles</td><td>Composer</td><td>116</td><td class="money" data-usd="13765768906">13765768906</td><td class="money" data-usd="21028779045">21028779045</td><td class="money" data-usd="34794547951">34794547951</td></tr>
+<tr><td>In Technical Roles</td><td>Music Producer</td><td>6</td><td class="money" data-usd="718822958">718822958</td><td class="money" data-usd="996188750">996188750</td><td class="money" data-usd="1715011708">1715011708</td></tr>
+<tr><td>In Technical Roles</td><td>Executive Music Producer</td><td>4</td><td class="money" data-usd="262980989">262980989</td><td class="money" data-usd="391891957">391891957</td><td class="money" data-usd="654872946">654872946</td></tr>
+<tr><td>In Technical Roles</td><td>Score Producer</td><td>3</td><td class="money" data-usd="363209920">363209920</td><td class="money" data-usd="600093313">600093313</td><td class="money" data-usd="963303233">963303233</td></tr>
+<tr><td>In Technical Roles</td><td>Song Writer</td><td>3</td><td class="money" data-usd="66976290">66976290</td><td class="money" data-usd="88000000">88000000</td><td class="money" data-usd="154976290">154976290</td></tr>
+<tr><td>In Technical Roles</td><td>Additional Music</td><td>2</td><td class="money" data-usd="94936380">94936380</td><td class="money" data-usd="86000000">86000000</td><td class="money" data-usd="180936380">180936380</td></tr>
+<tr><td>In Technical Roles</td><td>Executive Producer</td><td>1</td><td class="money" data-usd="89760956">89760956</td><td class="money" data-usd="342389938">342389938</td><td class="money" data-usd="432150894">432150894</td></tr>
+<tr><td>In Technical Roles</td><td>Line Producer</td><td>1</td><td class="money" data-usd="34327391">34327391</td><td class="money" data-usd="0">0</td><td class="money" data-usd="34327391">34327391</td></tr>
+
+
+
+
+</Table>
+
+
+</p>
+
+</div>
+
+
+
+<footer>
+
+        <p>Copyright &copy; 2026 Hans Zimmer Music Fan Club - Simon Kidney</p>
+
+    </footer>
+
+    </body
