@@ -1,6 +1,22 @@
 body {margin: 0;padding: 0; font-family: 'Times New Roman', Times, serif;background-color: white; line-height: 1.6;}
 
-header {background-color: black; color: white; padding:20px; text-align: center;}
+header {background-color: black; color: white; ;text-align: center;}
+
+.site-header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hhZwNUvboD89zSP15o9TDEQl5eSlqFIVlg&s=10");
+    background-size: cover;  
+    padding-top:20px;     
+    background-position: center;  
+      height: 50vh;         
+    color: white;                 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
 
 nav { background-color:antiquewhite; display: flex; justify-content: center; padding: 10px;}
 
